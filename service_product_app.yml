@@ -1,0 +1,47 @@
+spring:
+  profiles:
+    active: av
+---
+server:
+  port: 8005
+spring:
+  application:
+    name: PROUDECT-SERVICE
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/lianjia
+      username: root
+      password: root
+  profiles: av
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:7012/eureka/
+mybatis-plus:
+  mapper-locations: classpath:/cn/itsource/lianjia/mapper/*Mapper.xml
+  type-aliases-package:  cn.itsource.lianjia.domain
+
+
+---
+server:
+  port: 8007
+spring:
+  application:
+    name: PROUDECT-SERVICE-TEST
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/lianjia
+      username: root
+      password: root
+  profiles: test
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:7012/eureka/
+mybatis-plus:
+  mapper-locations: classpath:/cn/itsource/lianjia/mapper/*Mapper.xml
+  type-aliases-package:  cn.itsource.lianjia.domain
+
+
+
+
