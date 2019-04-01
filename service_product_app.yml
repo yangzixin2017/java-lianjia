@@ -19,7 +19,7 @@ eureka:
      defaultZone: http://localhost:7012/eureka/
 mybatis-plus:
   mapper-locations: classpath:cn/itsource/lianjian/mapper/*Mapper.xml
-  type-aliases-package:  cn.itsource.lianjia.domain
+  type-aliases-package:  cn.itsource.lianjia.domain,cn.itsource.lianjia.query
 
 
 ---
@@ -40,7 +40,7 @@ eureka:
      defaultZone: http://localhost:7012/eureka/
 mybatis-plus:
   mapper-locations: classpath:cn/itsource/lianjian/mapper/*Mapper.xml
-  type-aliases-package:  cn.itsource.lianjia.domain
+  type-aliases-package:  cn.itsource.lianjia.domain,,cn.itsource.lianjia.query
 
 
 
